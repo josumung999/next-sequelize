@@ -6,10 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "model:generate": "env-cmd sequelize-cli model:generate",
+    "seed": "env-cmd sequelize-cli db:seed:all",
+    "migrate": "env-cmd sequelize-cli db:migrate",
+    "migrate:rollback": "env-cmd sequelize-cli db:migrate:undo",
+    "migrate:rollback:all": "env-cmd sequelize-cli db:migrate:undo:all"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "env-cmd": "^10.1.0",
     "js-cookie": "^3.0.1",
     "jsonwebtoken": "^8.5.1",
     "mysql2": "^2.3.3",
